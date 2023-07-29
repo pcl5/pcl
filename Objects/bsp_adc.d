@@ -1,0 +1,9 @@
+.\objects\bsp_adc.o: User\bsp\bsp_adc.c
+.\objects\bsp_adc.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\bsp_adc.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\bsp_adc.o: .\Lib\driverlib/sysctl.h
+.\objects\bsp_adc.o: .\Lib\driverlib/adc.h
+.\objects\bsp_adc.o: .\Lib\inc\hw_memmap.h
+.\objects\bsp_adc.o: .\Lib\driverlib/gpio.h
+.\objects\bsp_adc.o: User\bsp\bsp_adc.h
+.\objects\bsp_adc.o: .\User\main.h

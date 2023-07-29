@@ -1,0 +1,12 @@
+.\objects\i2cm_drv.o: Lib\sensorlib\i2cm_drv.c
+.\objects\i2cm_drv.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\i2cm_drv.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\i2cm_drv.o: .\Lib\inc/hw_i2c.h
+.\objects\i2cm_drv.o: .\Lib\inc/hw_memmap.h
+.\objects\i2cm_drv.o: .\Lib\inc/hw_types.h
+.\objects\i2cm_drv.o: .\Lib\driverlib/debug.h
+.\objects\i2cm_drv.o: .\Lib\driverlib/i2c.h
+.\objects\i2cm_drv.o: .\Lib\driverlib/interrupt.h
+.\objects\i2cm_drv.o: .\Lib\driverlib/rom.h
+.\objects\i2cm_drv.o: .\Lib\driverlib/rom_map.h
+.\objects\i2cm_drv.o: .\Lib\sensorlib/i2cm_drv.h

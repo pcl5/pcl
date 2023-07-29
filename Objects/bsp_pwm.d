@@ -1,0 +1,10 @@
+.\objects\bsp_pwm.o: User\bsp\bsp_pwm.c
+.\objects\bsp_pwm.o: .\User\main.h
+.\objects\bsp_pwm.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\bsp_pwm.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\bsp_pwm.o: .\Lib\inc\hw_memmap.h
+.\objects\bsp_pwm.o: .\Lib\driverlib/gpio.h
+.\objects\bsp_pwm.o: .\Lib\driverlib/pwm.h
+.\objects\bsp_pwm.o: .\Lib\driverlib/pin_map.h
+.\objects\bsp_pwm.o: .\Lib\driverlib/sysctl.h
+.\objects\bsp_pwm.o: User\bsp\bsp_pwm.h

@@ -1,0 +1,13 @@
+.\objects\usb.o: Lib\driverlib\usb.c
+.\objects\usb.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\usb.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\usb.o: .\Lib\inc/hw_ints.h
+.\objects\usb.o: .\Lib\inc/hw_memmap.h
+.\objects\usb.o: .\Lib\inc/hw_types.h
+.\objects\usb.o: .\Lib\inc/hw_sysctl.h
+.\objects\usb.o: .\Lib\inc/hw_usb.h
+.\objects\usb.o: .\Lib\driverlib/debug.h
+.\objects\usb.o: .\Lib\driverlib/interrupt.h
+.\objects\usb.o: .\Lib\driverlib/sysctl.h
+.\objects\usb.o: .\Lib\driverlib/udma.h
+.\objects\usb.o: .\Lib\driverlib/usb.h

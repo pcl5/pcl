@@ -1,0 +1,16 @@
+.\objects\main.o: User\main.c
+.\objects\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\main.o: .\Lib\inc\tm4c1290ncpdt.h
+.\objects\main.o: .\Lib\driverlib/sysctl.h
+.\objects\main.o: .\Lib\driverlib/interrupt.h
+.\objects\main.o: .\FreeRTOS\include\FreeRTOS.h
+.\objects\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\objects\main.o: .\User\FreeRTOSConfig.h
+.\objects\main.o: .\FreeRTOS\include\projdefs.h
+.\objects\main.o: .\FreeRTOS\include\portable.h
+.\objects\main.o: .\FreeRTOS\include\deprecated_definitions.h
+.\objects\main.o: .\FreeRTOS\port\RVDS\ARM_CM4F\portmacro.h
+.\objects\main.o: .\FreeRTOS\include\mpu_wrappers.h
+.\objects\main.o: .\FreeRTOS\include\task.h
+.\objects\main.o: .\FreeRTOS\include\list.h

@@ -1,0 +1,13 @@
+.\objects\ist8310.o: User\bsp\ist8310.c
+.\objects\ist8310.o: .\User\main.h
+.\objects\ist8310.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\ist8310.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\ist8310.o: User\bsp\ist8310.h
+.\objects\ist8310.o: .\Lib\inc\hw_memmap.h
+.\objects\ist8310.o: .\Lib\driverlib/i2c.h
+.\objects\ist8310.o: User\bsp\bsp_uart.h
+.\objects\ist8310.o: .\User\config.h
+.\objects\ist8310.o: .\User\const.h
+.\objects\ist8310.o: .\User\utils\user_RingBuf.h
+.\objects\ist8310.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\ist8310.o: .\User\utils\user_Queue.h

@@ -1,0 +1,11 @@
+.\objects\bsp_tim.o: User\bsp\bsp_tim.c
+.\objects\bsp_tim.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\bsp_tim.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\bsp_tim.o: User\bsp\bsp_tim.h
+.\objects\bsp_tim.o: .\Lib\inc\hw_memmap.h
+.\objects\bsp_tim.o: .\Lib\driverlib/sysctl.h
+.\objects\bsp_tim.o: .\Lib\driverlib/interrupt.h
+.\objects\bsp_tim.o: .\Lib\driverlib/timer.h
+.\objects\bsp_tim.o: .\User\tm4c129_it.h
+.\objects\bsp_tim.o: .\User\config.h
+.\objects\bsp_tim.o: .\User\const.h

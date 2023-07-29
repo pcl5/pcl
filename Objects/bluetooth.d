@@ -1,0 +1,13 @@
+.\objects\bluetooth.o: User\bsp\bluetooth.c
+.\objects\bluetooth.o: User\bsp\bluetooth.h
+.\objects\bluetooth.o: User\bsp\bsp_uart.h
+.\objects\bluetooth.o: .\Lib\inc\hw_memmap.h
+.\objects\bluetooth.o: .\User\config.h
+.\objects\bluetooth.o: .\User\const.h
+.\objects\bluetooth.o: .\User\utils\user_RingBuf.h
+.\objects\bluetooth.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\bluetooth.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\bluetooth.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\bluetooth.o: .\User\utils\user_Queue.h
+.\objects\bluetooth.o: .\Lib\driverlib/sysctl.h
+.\objects\bluetooth.o: .\User\config.h

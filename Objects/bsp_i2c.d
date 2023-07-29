@@ -1,0 +1,16 @@
+.\objects\bsp_i2c.o: User\bsp\bsp_i2c.c
+.\objects\bsp_i2c.o: .\User\main.h
+.\objects\bsp_i2c.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\bsp_i2c.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\bsp_i2c.o: User\bsp\bsp_i2c.h
+.\objects\bsp_i2c.o: .\Lib\sensorlib/i2cm_drv.h
+.\objects\bsp_i2c.o: .\Lib\inc\tm4c1290ncpdt.h
+.\objects\bsp_i2c.o: .\Lib\inc\hw_memmap.h
+.\objects\bsp_i2c.o: .\Lib\inc\hw_types.h
+.\objects\bsp_i2c.o: .\Lib\inc\hw_i2c.h
+.\objects\bsp_i2c.o: .\Lib\driverlib/i2c.h
+.\objects\bsp_i2c.o: .\Lib\driverlib/sysctl.h
+.\objects\bsp_i2c.o: .\Lib\driverlib/pin_map.h
+.\objects\bsp_i2c.o: .\Lib\driverlib/gpio.h
+.\objects\bsp_i2c.o: .\User\config.h
+.\objects\bsp_i2c.o: .\User\const.h
