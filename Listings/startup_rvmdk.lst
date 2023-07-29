@@ -615,11 +615,12 @@ ARM Macro Assembler    Page 10
   370 00000000         ;*******************************************************
                        ***********************
   371 00000000                 END
-Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp.sp --apcs=
-interwork --depend=.\objects\startup_rvmdk.d -o.\objects\startup_rvmdk.o -ID:\K
-eil_v5\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C129 --predefine="__MICR
-OLIB SETA 1" --predefine="__UVISION_VERSION SETA 535" --predefine="TM4C1290NCPD
-T SETA 1" --list=.\listings\startup_rvmdk.lst Startup\startup_rvmdk.S
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp --apcs=int
+erwork --depend=.\objects\startup_rvmdk.d -o.\objects\startup_rvmdk.o -I.\RTE\_
+TIVA_RTOS_CAR_tm4c129 -ID:\Keil525\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\
+TM4C129 -ID:\Keil525\ARM\CMSIS\Include --predefine="__MICROLIB SETA 1" --predef
+ine="__UVISION_VERSION SETA 525" --predefine="TM4C1290NCPDT SETA 1" --list=.\li
+stings\startup_rvmdk.lst Startup\startup_rvmdk.S
 
 
 

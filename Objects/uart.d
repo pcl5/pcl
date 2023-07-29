@@ -1,6 +1,6 @@
 .\objects\uart.o: Lib\driverlib\uart.c
-.\objects\uart.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
-.\objects\uart.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\uart.o: D:\Keil525\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\uart.o: D:\Keil525\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\uart.o: .\Lib\inc/hw_ints.h
 .\objects\uart.o: .\Lib\inc/hw_memmap.h
 .\objects\uart.o: .\Lib\inc/hw_sysctl.h

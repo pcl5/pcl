@@ -1,6 +1,6 @@
 .\objects\pwm.o: Lib\driverlib\pwm.c
-.\objects\pwm.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
-.\objects\pwm.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\pwm.o: D:\Keil525\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\pwm.o: D:\Keil525\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\pwm.o: .\Lib\inc/hw_ints.h
 .\objects\pwm.o: .\Lib\inc/hw_memmap.h
 .\objects\pwm.o: .\Lib\inc/hw_pwm.h

@@ -1,9 +1,9 @@
 .\objects\tasks.o: FreeRTOS\tasks.c
-.\objects\tasks.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
-.\objects\tasks.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\tasks.o: D:\Keil525\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\tasks.o: D:\Keil525\ARM\ARMCC\Bin\..\include\string.h
 .\objects\tasks.o: .\FreeRTOS\include\FreeRTOS.h
-.\objects\tasks.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
-.\objects\tasks.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\tasks.o: D:\Keil525\ARM\ARMCC\Bin\..\include\stddef.h
+.\objects\tasks.o: D:\Keil525\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\tasks.o: .\User\FreeRTOSConfig.h
 .\objects\tasks.o: .\FreeRTOS\include\projdefs.h
 .\objects\tasks.o: .\FreeRTOS\include\portable.h
@@ -14,4 +14,4 @@
 .\objects\tasks.o: .\FreeRTOS\include\list.h
 .\objects\tasks.o: .\FreeRTOS\include\timers.h
 .\objects\tasks.o: .\FreeRTOS\include\StackMacros.h
-.\objects\tasks.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\tasks.o: D:\Keil525\ARM\ARMCC\Bin\..\include\stdio.h

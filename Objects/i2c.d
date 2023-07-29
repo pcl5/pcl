@@ -1,6 +1,6 @@
 .\objects\i2c.o: Lib\driverlib\i2c.c
-.\objects\i2c.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
-.\objects\i2c.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\i2c.o: D:\Keil525\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\i2c.o: D:\Keil525\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\i2c.o: .\Lib\inc/hw_i2c.h
 .\objects\i2c.o: .\Lib\inc/hw_ints.h
 .\objects\i2c.o: .\Lib\inc/hw_memmap.h

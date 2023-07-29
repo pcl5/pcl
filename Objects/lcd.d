@@ -1,6 +1,6 @@
 .\objects\lcd.o: Lib\driverlib\lcd.c
-.\objects\lcd.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
-.\objects\lcd.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\lcd.o: D:\Keil525\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\lcd.o: D:\Keil525\ARM\ARMCC\Bin\..\include\stdbool.h
 .\objects\lcd.o: .\Lib\inc/hw_memmap.h
 .\objects\lcd.o: .\Lib\inc/hw_types.h
 .\objects\lcd.o: .\Lib\inc/hw_ints.h

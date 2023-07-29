@@ -1,7 +1,7 @@
 .\objects\hibernate.o: Lib\driverlib\hibernate.c
-.\objects\hibernate.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
-.\objects\hibernate.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
-.\objects\hibernate.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\time.h
+.\objects\hibernate.o: D:\Keil525\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\hibernate.o: D:\Keil525\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\hibernate.o: D:\Keil525\ARM\ARMCC\Bin\..\include\time.h
 .\objects\hibernate.o: .\Lib\inc/hw_hibernate.h
 .\objects\hibernate.o: .\Lib\inc/hw_ints.h
 .\objects\hibernate.o: .\Lib\inc/hw_sysctl.h

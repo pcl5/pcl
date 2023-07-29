@@ -1,6 +1,6 @@
 .\objects\des.o: Lib\driverlib\des.c
-.\objects\des.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
-.\objects\des.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\des.o: D:\Keil525\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\des.o: D:\Keil525\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\des.o: .\Lib\inc/hw_des.h
 .\objects\des.o: .\Lib\inc/hw_ints.h
 .\objects\des.o: .\Lib\inc/hw_memmap.h
