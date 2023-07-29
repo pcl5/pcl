@@ -186,7 +186,6 @@
             <uocXRam>0</uocXRam>
             <RvdsVP>2</RvdsVP>
             <RvdsMve>0</RvdsMve>
-            <RvdsCdeCp>0</RvdsCdeCp>
             <hadIRAM2>0</hadIRAM2>
             <hadIROM2>0</hadIROM2>
             <StupSel>8</StupSel>
@@ -340,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define>rvmdk PART_TM4C1290NCPDT</Define>
               <Undefine></Undefine>
-              <IncludePath>.\User;.\Lib;.\Lib\inc;.\FreeRTOS\include;.\FreeRTOS\port\RVDS\ARM_CM4F</IncludePath>
+              <IncludePath>.\User;.\Lib;.\Lib\inc;.\FreeRTOS\include;.\FreeRTOS\port\RVDS\ARM_CM4F;\User\BSP</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -353,7 +352,7 @@
             <NoWarn>0</NoWarn>
             <uSurpInc>0</uSurpInc>
             <useXO>0</useXO>
-            <ClangAsOpt>1</ClangAsOpt>
+            <uClangAs>0</uClangAs>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define></Define>
@@ -644,6 +643,44 @@
             </File>
           </Files>
         </Group>
+        <Group>
+          <GroupName>User/BSP</GroupName>
+          <Files>
+            <File>
+              <FileName>bsp_gpio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\User\BSP\bsp_gpio.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_LED.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\User\BSP\bsp_LED.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_key.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\User\BSP\bsp_key.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_uart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\User\BSP\bsp_uart.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_pwm.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\User\BSP\bsp_pwm.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_motor.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\User\BSP\bsp_motor.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>User/utils</GroupName>
+        </Group>
       </Groups>
     </Target>
   </Targets>
@@ -653,14 +690,5 @@
     <components/>
     <files/>
   </RTE>
-
-  <LayerInfo>
-    <Layers>
-      <Layer>
-        <LayName>TIVA_RTOS_CAR_tm4c129</LayName>
-        <LayPrjMark>1</LayPrjMark>
-      </Layer>
-    </Layers>
-  </LayerInfo>
 
 </Project>
