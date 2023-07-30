@@ -11,12 +11,8 @@
 
 #include <stdint.h>
 #include <stdbool.h>
-#include "config.h"
-#include "tm4c1290ncpdt.h"
-#include "driverlib/sysctl.h"		
-#include "driverlib/interrupt.h"
 #include "main.h"
-
+#include "bsp.h"
 #include "FreeRTOS.h"
 #include "task.h"
 extern BaseType_t RTOS_Init(void);//创建任务,在freertos.c中实现
@@ -27,23 +23,31 @@ extern BaseType_t RTOS_Init(void);//创建任务,在freertos.c中实现
  */
 static void BSP_Init(void){
 	SysCtlClockFreqSet(SYSCTL_XTAL_16MHZ|SYSCTL_OSC_MAIN|SYSCTL_USE_PLL|SYSCTL_CFG_VCO_240,120000000);
-	
+//	FPUEnable();
+//	FPULazyStackingEnable();
+	IntPriorityGroupingSet(3);
+	init_Bsp_GPIO();
+	init_Bsp_UART();
+	//printf_user(CONSOLE_UART,"Pass\r\n");
 }
 
 int main(void){
 	BaseType_t xReturn = pdPASS;//
 
 	BSP_Init();
-
+  user_printf(CONSOLE_UART,"BSP Pass.\r\n");
 	xReturn = RTOS_Init();
 	
 	if(pdPASS == xReturn){
+		printf_user(CONSOLE_UART,"Launch RTOS\r\n");
 		IntMasterEnable();
+		printf_user(CONSOLE_UART,"Enable Interrupt\r\n");
 		portENABLE_INTERRUPTS();
 		vTaskStartScheduler();
 	}
 	else {
 		/*FreeRTOS failed*/
+		printf_user(CONSOLE_UART,"RTOS Failed!\r\n");
 	}
 
 	while(1){

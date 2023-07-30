@@ -9,11 +9,15 @@
  * 
  */
 #include "uart_handle.h"
+#include "config.h"
+#include "bsp_uart.h"
 
 void UartCallBack_USB(void){
 #ifdef USB_UART
     Uart_DMA_Trans(USB_UART,uart_usb.receive,uart_usb.len);
     // Uart_DMA_Trans(BLE_UART,&uart_usb.receive[1],uart_usb.len-2);//…Ë÷√¿∂—¿”√
+		int i;
+	i=uart_usb.receive[1];
 #endif
 }
 
@@ -27,12 +31,12 @@ void UartCallBack_BLE(void){
 
 void UartCallBack_JET(void){
 #ifdef Jetson_UART
-    jts_to_mcu.target_v_z_H=uart_jetson.receive[5];
-    jts_to_mcu.target_v_z_L=uart_jetson.receive[6];
-    jts_to_mcu.target_v_x_H=uart_jetson.receive[3];
-    jts_to_mcu.target_v_x_L=uart_jetson.receive[4];
-    Uart_DMA_Trans(CONSOLE_UART,uart_jetson.receive,uart_jetson.len);
-    Download_From_JTS();
+//    jts_to_mcu.target_v_z_H=uart_jetson.receive[5];
+//    jts_to_mcu.target_v_z_L=uart_jetson.receive[6];
+//    jts_to_mcu.target_v_x_H=uart_jetson.receive[3];
+//    jts_to_mcu.target_v_x_L=uart_jetson.receive[4];
+//    Uart_DMA_Trans(CONSOLE_UART,uart_jetson.receive,uart_jetson.len);
+//    Download_From_JTS();
 #endif
 }
 

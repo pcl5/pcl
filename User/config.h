@@ -9,7 +9,7 @@
  */
 
 /*系统频率,仅作为计算参数,不能用来设置*/
-#define         USER_SYS_FREQ          12000000
+#define         USER_SYS_FREQ          120000000
 
 
 /*----testbench是否启用----*/

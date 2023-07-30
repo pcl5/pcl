@@ -9,11 +9,15 @@
  * 
  */
 #include "bsp.h"
- #include "FreeRTOS.h"
- #include "bsp_uart.h"
- #include "task.h"
+#include "freertos.h"
+#include "task.h"
 #include "semphr.h"
+
 #include "tm4c_it.h"
+#include <stdio.h>
+#include <stdarg.h>
+
+extern SemaphoreHandle_t semphr_uart_receive;
 
 #ifdef USB_UART
 uart_device uart_usb={0};
@@ -31,12 +35,67 @@ uart_device uart_k210={0};
 uart_device uart_openmv={0};
 #endif
 
+
+/*
+ * 重定义printf
+ */
+uint32_t uiBase_stdio=CONSOLE_UART;
+int fputc(int ch, FILE* stream)
+{
+#if USE_NON_BLOKING_PUT
+    UARTCharPutNonBlocking(uiBase_stdio, (uint8_t)ch);
+#else
+    UARTCharPut(uiBase_stdio, (uint8_t)ch);
+#endif
+    return ch;
+}
+
 static void _DeviceRxIntHandler(uint32_t ui32Base, uart_device* device);
+
+/*!
+ * @brief 用户print函数
+ * @attention 注意当前是否为非阻塞输出设置,建议输出16字符以内
+ * @param uiBase 输出端口BASE
+ * @param pcString 待输出string,接受args
+ */
+void printf_user(uint32_t uiBase, const char *pcString, ...)
+{
+    uiBase_stdio=uiBase;
+    va_list vaArgP;
+
+    //
+    // Start the varargs processing.
+    //
+    va_start(vaArgP, pcString);
+
+    vprintf(pcString, vaArgP);
+
+    //
+    // We're finished with the varargs now.
+    //
+    va_end(vaArgP);
+}       
+
+//函数功能：串口发送数据,类似printf
+void user_printf(uint32_t ui32Base, const char *pui8Format, ...) 
+{
+    char buffer[256];
+    va_list va;
+
+    va_start(va, pui8Format);
+    vsnprintf(buffer, sizeof(buffer), pui8Format, va);
+    va_end(va);
+
+    // Assuming you have a UARTCharPut function that writes a char to the UART
+    for(int i = 0; buffer[i] != '\0'; i++) {
+        UARTCharPut(ui32Base, buffer[i]);
+    }
+}
 
 /*!
  * @brief 初始化UART
  */
-void init_Bsp_UART(){
+void init_Bsp_UART(void){
 	/* UART0 */
     SysCtlPeripheralEnable(SYSCTL_PERIPH_UART0);
     GPIOPinTypeUART(GPIO_PORTA_BASE, GPIO_PIN_0|GPIO_PIN_1);
@@ -138,10 +197,10 @@ void _DeviceRxIntHandler(uint32_t ui32Base, uart_device* device){
             len=device->rx_p-device->tx_p;
             Queue_uint8_t_enqueue(&device->rx_len_queue,len);
 #if  (!TEST_BENCH)
-//            BaseType_t pxHigherPriorityTaskWoken;
-//            if(xSemaphoreGiveFromISR(semphr_uart_receive,&pxHigherPriorityTaskWoken) == errQUEUE_FULL){//给信号量,拉起RX处理任务
-//                error_uart();//丢包了
-//            }
+            BaseType_t pxHigherPriorityTaskWoken;
+            if(xSemaphoreGiveFromISR(semphr_uart_receive,&pxHigherPriorityTaskWoken) == errQUEUE_FULL){//给信号量,拉起RX处理任务
+                error_uart();//丢包了
+            }
             // portYIELD_FROM_ISR(pxHigherPriorityTaskWoken);
 #endif
             device->rx_p=0;
@@ -284,13 +343,13 @@ void Uart_DMA_Trans(uint32_t uiBase, uint8_t *pcString, uint16_t length){
 
 //DMA发送错误提示
 void error_uDMA(void){
-  //  printf_user(CONSOLE_UART,"uDMA busy\r\n");
+    printf_user(CONSOLE_UART,"uDMA busy\r\n");
     while(1);
 }
 
 //串口接收错误提示
 void error_uart(void){
-  //  printf_user(CONSOLE_UART,"UART Data SKIPPED\r\n");
+    printf_user(CONSOLE_UART,"UART Data SKIPPED\r\n");
     while(1);
 }
 
