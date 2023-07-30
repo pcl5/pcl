@@ -184,7 +184,6 @@
             <hadXRAM>0</hadXRAM>
             <uocXRam>0</uocXRam>
             <RvdsVP>2</RvdsVP>
-            <RvdsMve>0</RvdsMve>
             <hadIRAM2>0</hadIRAM2>
             <hadIROM2>0</hadIROM2>
             <StupSel>8</StupSel>
@@ -406,6 +405,11 @@
               <FileName>key_handle.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\User\key_handle.c</FilePath>
+            </File>
+            <File>
+              <FileName>communication.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\User\communication.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -694,6 +698,21 @@
               <FileName>bsp_uDMA.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\User\BSP\bsp_uDMA.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_keypad.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\User\BSP\bsp_keypad.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_bluetooth.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\User\BSP\bsp_bluetooth.c</FilePath>
+            </File>
+            <File>
+              <FileName>Datascope.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\User\BSP\Datascope.c</FilePath>
             </File>
           </Files>
         </Group>

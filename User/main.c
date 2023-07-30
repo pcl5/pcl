@@ -15,7 +15,15 @@
 #include "bsp.h"
 #include "FreeRTOS.h"
 #include "task.h"
+
 extern BaseType_t RTOS_Init(void);//创建任务,在freertos.c中实现
+
+void delay_ms(uint32_t n)
+{
+	uint32_t count;
+	count=USER_SYS_FREQ/1000;		
+	SysCtlDelay(n*count/3);				
+}
 
 /*!
  * @brief 初始化硬件驱动包
@@ -28,7 +36,12 @@ static void BSP_Init(void){
 	IntPriorityGroupingSet(3);
 	init_Bsp_GPIO();
 	init_Bsp_UART();
+	init_Bsp_uDMA();
 	//printf_user(CONSOLE_UART,"Pass\r\n");
+	init_filter();
+	// BLE_AT_Set();
+	delay_ms(200);
+	//BLE_AT_Set();
 }
 
 int main(void){
@@ -41,8 +54,8 @@ int main(void){
 	if(pdPASS == xReturn){
 		printf_user(CONSOLE_UART,"Launch RTOS\r\n");
 		IntMasterEnable();
-		printf_user(CONSOLE_UART,"Enable Interrupt\r\n");
 		portENABLE_INTERRUPTS();
+		printf_user(CONSOLE_UART,"Enable Interrupt\r\n");
 		vTaskStartScheduler();
 	}
 	else {

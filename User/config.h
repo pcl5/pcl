@@ -50,7 +50,7 @@
 #endif
  
 /*终端串口*/
-#define             CONSOLE_UART       USB_UART 
+#define             CONSOLE_UART       BLE_UART 
 
 /*串口波特率*/
 #define         BAUD_RATE_UART0     115200

@@ -1,8 +1,8 @@
 /**
  * @file bsp.h
  * @author cbr (ran13245@outlook.com)
- * @brief ¼¯³É°å¼¶Çý¶¯³ÌÐò
- * @attention Ö»ÔÊÐíÔÚÓ¦ÓÃ²ã°üº¬,²»ÔÊÐíÔÚÇý¶¯²ã°üº¬,·ñÔò¿ÉÄÜ³öÏÖÍ·ÎÄ¼þµÝ¹éÒýÓÃ
+ * @brief ï¿½ï¿½ï¿½É°å¼¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ * @attention Ö»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½Ã²ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü³ï¿½ï¿½ï¿½Í·ï¿½Ä¼ï¿½ï¿½Ý¹ï¿½ï¿½ï¿½ï¿½ï¿½
  * @version 0.1
  * @date 2023-07-9
  * 
@@ -36,8 +36,9 @@
 #include "bsp_uart.h"
 #include "bsp_gpio.h"
 #include "bsp_pwm.h"
+#include "bsp_keypad.h"
 //#include "bsp_i2c.h"
-//#include "bsp_uDMA.h"
+#include "bsp_uDMA.h"
 //#include "bsp_adc.h"
 //#include "bsp_tim.h"
 //#include "motor.h"
@@ -50,8 +51,10 @@
 #include "uart_handle.h"
 //#include "tim_handle.h"
 #include "key_handle.h"
-//#include "bluetooth.h"
-//#include "protocol.h"
+#include "bsp_bluetooth.h"
+
+
+#include "Datascope.h"
 //#include "car_attitude.h"
 //#include "car_control.h"
 #include "filter.h"
