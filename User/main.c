@@ -1,3 +1,13 @@
+/*
+ * @Description: TM4C
+ * @file: ${filename}
+ * @brief: ${BRIEF}
+ * @Version: 1.0
+ * @Autor: PCL
+ * @Date: 2023-07-29 21:42:51
+ * @Code Reference: cbr wgj wx
+ * @LastEditTime: 2023-07-30 23:26:02
+ */
 /**
  * @file main.c
  * @author cbr (ran13245@outlook.com)
