@@ -36,6 +36,7 @@
 #include "bsp_uart.h"
 #include "bsp_gpio.h"
 #include "bsp_pwm.h"
+#include "bsp_keypad.h"
 //#include "bsp_i2c.h"
 //#include "bsp_uDMA.h"
 //#include "bsp_adc.h"
