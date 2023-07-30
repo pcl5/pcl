@@ -16,8 +16,6 @@ void UartCallBack_USB(void){
 #ifdef USB_UART
     Uart_DMA_Trans(USB_UART,uart_usb.receive,uart_usb.len);
     // Uart_DMA_Trans(BLE_UART,&uart_usb.receive[1],uart_usb.len-2);//…Ë÷√¿∂—¿”√
-		int i;
-	i=uart_usb.receive[1];
 #endif
 }
 
