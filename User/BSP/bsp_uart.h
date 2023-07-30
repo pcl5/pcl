@@ -1,8 +1,8 @@
 /**
  * @file bsp_uart.h
  * @author cbr (ran13245@outlook.com)
- * @brief 板级UART驱动
- * @attention 重定义了print,设置为非阻塞输出时每次print不得超过16个ASCII字符
+ * @brief 鏉跨骇UART椹卞姩
+ * @attention 閲嶅畾涔変簡print,璁剧疆涓洪潪闃诲杈撳嚭鏃舵瘡娆rint涓嶅緱瓒呰繃16涓狝SCII瀛楃
  * @version 0.3
  * @date 2023-06-25
  * 

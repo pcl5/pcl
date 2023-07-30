@@ -1,7 +1,7 @@
 /**
  * @file uart_handle.c
  * @author cbr (ran13245@outlook.com)
- * @brief UARTÊäÈëµÄ´¦Àí³ÌÐò
+ * @brief UARTï¿½ï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  * @version 0.1
  * @date 2023-06-25
  * 
@@ -15,9 +15,7 @@
 void UartCallBack_USB(void){
 #ifdef USB_UART
     Uart_DMA_Trans(USB_UART,uart_usb.receive,uart_usb.len);
-//    // Uart_DMA_Trans(BLE_UART,&uart_usb.receive[1],uart_usb.len-2);//ÉèÖÃÀ¶ÑÀÓÃ
-//		int i;
-//	i=uart_usb.receive[1];
+    // Uart_DMA_Trans(BLE_UART,&uart_usb.receive[1],uart_usb.len-2);//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 #endif
 }
 

@@ -98,7 +98,7 @@ void Drv_PWM_Init(void)
 
 //PWM输出
 //参数：Base：PWM模块，PWM_OUT：PWM输出通道，Duty：占空比,带%
-void Set_PWM(uint32_t Base, uint32_t PWM_OUT, float Duty)
+void Set_Duty(uint32_t Base, uint32_t PWM_OUT, float Duty)
 {
     if(Duty < 0.0F) Duty=0.0F;
 	if(Duty > 1.0F) Duty=1.0F;

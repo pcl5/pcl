@@ -1,3 +1,13 @@
+/*
+ * @Description: TM4C
+ * @file: ${filename}
+ * @brief: ${BRIEF}
+ * @Version: 1.0
+ * @Autor: PCL
+ * @Date: 2023-07-30 12:32:40
+ * @Code Reference: cbr wgj wx
+ * @LastEditTime: 2023-07-30 22:39:05
+ */
 /**
  * @file bsp.h
  * @author cbr (ran13245@outlook.com)
