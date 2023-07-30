@@ -14,7 +14,7 @@
 
 #include <stdint.h>
 
-void init_drv_GPIO(void);
+void init_Bsp_GPIO(void);
 
 
 #endif

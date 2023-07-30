@@ -16,7 +16,7 @@
 #include "hw_memmap.h"
 #include "driverlib/sysctl.h"
 #include "driverlib/interrupt.h"
-#include "tm4c129_it.h"
+#include "tm4c_it.h"
 #include "hw_types.h"
 #include "hw_gpio.h"
 #include "config.h"
@@ -25,7 +25,7 @@
  * @brief ≥ı ºªØGPIO
  * @param  none
  */
-void init_drv_GPIO(void){
+void init_Bsp_GPIO(void){
     /* GPIO port enable */
     SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOA);
     SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOB);

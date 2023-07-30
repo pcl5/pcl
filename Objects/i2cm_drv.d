@@ -1,6 +1,6 @@
 .\objects\i2cm_drv.o: Lib\sensorlib\i2cm_drv.c
-.\objects\i2cm_drv.o: D:\Keil525\ARM\ARMCC\Bin\..\include\stdbool.h
-.\objects\i2cm_drv.o: D:\Keil525\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\i2cm_drv.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\i2cm_drv.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\i2cm_drv.o: .\Lib\inc/hw_i2c.h
 .\objects\i2cm_drv.o: .\Lib\inc/hw_memmap.h
 .\objects\i2cm_drv.o: .\Lib\inc/hw_types.h

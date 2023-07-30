@@ -1,11 +1,13 @@
 .\objects\main.o: User\main.c
-.\objects\main.o: D:\Keil525\ARM\ARMCC\Bin\..\include\stdint.h
-.\objects\main.o: D:\Keil525\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\main.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\main.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\main.o: User\config.h
 .\objects\main.o: .\Lib\inc\tm4c1290ncpdt.h
 .\objects\main.o: .\Lib\driverlib/sysctl.h
 .\objects\main.o: .\Lib\driverlib/interrupt.h
+.\objects\main.o: User\main.h
 .\objects\main.o: .\FreeRTOS\include\FreeRTOS.h
-.\objects\main.o: D:\Keil525\ARM\ARMCC\Bin\..\include\stddef.h
+.\objects\main.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 .\objects\main.o: .\User\FreeRTOSConfig.h
 .\objects\main.o: .\FreeRTOS\include\projdefs.h
 .\objects\main.o: .\FreeRTOS\include\portable.h

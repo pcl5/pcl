@@ -8,11 +8,13 @@
  * @copyright Copyright (c) 2023
  * 
  */
- #include "main.h"
- 
- 
- 
- 
+#include "bsp.h"
+ #include "FreeRTOS.h"
+ #include "bsp_uart.h"
+ #include "task.h"
+#include "semphr.h"
+#include "tm4c_it.h"
+
 #ifdef USB_UART
 uart_device uart_usb={0};
 #endif
@@ -34,7 +36,7 @@ static void _DeviceRxIntHandler(uint32_t ui32Base, uart_device* device);
 /*!
  * @brief 初始化UART
  */
-void init_drv_UART(){
+void init_Bsp_UART(){
 	/* UART0 */
     SysCtlPeripheralEnable(SYSCTL_PERIPH_UART0);
     GPIOPinTypeUART(GPIO_PORTA_BASE, GPIO_PIN_0|GPIO_PIN_1);
@@ -136,10 +138,10 @@ void _DeviceRxIntHandler(uint32_t ui32Base, uart_device* device){
             len=device->rx_p-device->tx_p;
             Queue_uint8_t_enqueue(&device->rx_len_queue,len);
 #if  (!TEST_BENCH)
-            BaseType_t pxHigherPriorityTaskWoken;
-            if(xSemaphoreGiveFromISR(semphr_uart_receive,&pxHigherPriorityTaskWoken) == errQUEUE_FULL){//给信号量,拉起RX处理任务
-                error_uart();//丢包了
-            }
+//            BaseType_t pxHigherPriorityTaskWoken;
+//            if(xSemaphoreGiveFromISR(semphr_uart_receive,&pxHigherPriorityTaskWoken) == errQUEUE_FULL){//给信号量,拉起RX处理任务
+//                error_uart();//丢包了
+//            }
             // portYIELD_FROM_ISR(pxHigherPriorityTaskWoken);
 #endif
             device->rx_p=0;
@@ -282,13 +284,13 @@ void Uart_DMA_Trans(uint32_t uiBase, uint8_t *pcString, uint16_t length){
 
 //DMA发送错误提示
 void error_uDMA(void){
-    printf_user(CONSOLE_UART,"uDMA busy\r\n");
+  //  printf_user(CONSOLE_UART,"uDMA busy\r\n");
     while(1);
 }
 
 //串口接收错误提示
 void error_uart(void){
-    printf_user(CONSOLE_UART,"UART Data SKIPPED\r\n");
+  //  printf_user(CONSOLE_UART,"UART Data SKIPPED\r\n");
     while(1);
 }
 

@@ -1,6 +1,6 @@
 .\objects\epi.o: Lib\driverlib\epi.c
-.\objects\epi.o: D:\Keil525\ARM\ARMCC\Bin\..\include\stdbool.h
-.\objects\epi.o: D:\Keil525\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\epi.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\epi.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\epi.o: .\Lib\inc/hw_epi.h
 .\objects\epi.o: .\Lib\inc/hw_ints.h
 .\objects\epi.o: .\Lib\inc/hw_memmap.h

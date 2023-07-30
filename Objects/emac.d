@@ -1,6 +1,6 @@
 .\objects\emac.o: Lib\driverlib\emac.c
-.\objects\emac.o: D:\Keil525\ARM\ARMCC\Bin\..\include\stdbool.h
-.\objects\emac.o: D:\Keil525\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\emac.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\emac.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\emac.o: .\Lib\inc/hw_ints.h
 .\objects\emac.o: .\Lib\inc/hw_memmap.h
 .\objects\emac.o: .\Lib\inc/hw_types.h

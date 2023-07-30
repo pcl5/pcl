@@ -1,6 +1,6 @@
 .\objects\systick.o: Lib\driverlib\systick.c
-.\objects\systick.o: D:\Keil525\ARM\ARMCC\Bin\..\include\stdbool.h
-.\objects\systick.o: D:\Keil525\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\systick.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\systick.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\systick.o: .\Lib\inc/hw_ints.h
 .\objects\systick.o: .\Lib\inc/hw_nvic.h
 .\objects\systick.o: .\Lib\inc/hw_types.h

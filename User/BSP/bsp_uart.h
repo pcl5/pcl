@@ -14,11 +14,11 @@
 #define __BSP_UART_H_
 
 #include "hw_memmap.h"
-//#include "config.h"
+#include "config.h"
 
 
 #include "Ring_buffer.h"
-#include "Queue.h"
+#include "user_queue.h"
 
 #include <stdbool.h>
 #include <stdint.h>
@@ -57,7 +57,7 @@ extern uart_device uart_k210;
 extern uart_device uart_openmv;
 #endif
 
-void init_drv_UART(void);
+void init_Bsp_UART(void);
 void UartRxIntHandler(uint32_t ui32Base);
 void UartRxSolve(void);
 void printf_user(uint32_t uiBase, const char *pcString, ...);

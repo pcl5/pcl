@@ -1,6 +1,6 @@
 .\objects\qei.o: Lib\driverlib\qei.c
-.\objects\qei.o: D:\Keil525\ARM\ARMCC\Bin\..\include\stdbool.h
-.\objects\qei.o: D:\Keil525\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\qei.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\qei.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\qei.o: .\Lib\inc/hw_ints.h
 .\objects\qei.o: .\Lib\inc/hw_memmap.h
 .\objects\qei.o: .\Lib\inc/hw_qei.h

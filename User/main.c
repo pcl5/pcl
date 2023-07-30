@@ -11,10 +11,11 @@
 
 #include <stdint.h>
 #include <stdbool.h>
-
+#include "config.h"
 #include "tm4c1290ncpdt.h"
 #include "driverlib/sysctl.h"		
 #include "driverlib/interrupt.h"
+#include "main.h"
 
 #include "FreeRTOS.h"
 #include "task.h"

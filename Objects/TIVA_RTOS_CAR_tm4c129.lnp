@@ -1,6 +1,8 @@
---cpu=Cortex-M4.fp.sp
+--cpu=Cortex-M4.fp
 ".\objects\main.o"
 ".\objects\freertos.o"
+".\objects\uart_handle.o"
+".\objects\tm4c_it.o"
 ".\objects\startup_rvmdk.o"
 ".\objects\adc.o"
 ".\objects\aes.o"
@@ -44,6 +46,13 @@
 ".\objects\heap_4.o"
 ".\objects\port.o"
 ".\objects\i2cm_drv.o"
+".\objects\bsp_gpio.o"
+".\objects\bsp_led.o"
+".\objects\bsp_key.o"
+".\objects\bsp_uart.o"
+".\objects\bsp_pwm.o"
+".\objects\bsp_motor.o"
+".\objects\filter.o"
 --library_type=microlib --strict --scatter ".\Objects\TIVA_RTOS_CAR_tm4c129.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

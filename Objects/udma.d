@@ -1,6 +1,6 @@
 .\objects\udma.o: Lib\driverlib\udma.c
-.\objects\udma.o: D:\Keil525\ARM\ARMCC\Bin\..\include\stdbool.h
-.\objects\udma.o: D:\Keil525\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\udma.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\udma.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\udma.o: .\Lib\inc/hw_sysctl.h
 .\objects\udma.o: .\Lib\inc/hw_types.h
 .\objects\udma.o: .\Lib\inc/hw_udma.h

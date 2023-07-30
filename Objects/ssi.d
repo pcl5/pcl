@@ -1,6 +1,6 @@
 .\objects\ssi.o: Lib\driverlib\ssi.c
-.\objects\ssi.o: D:\Keil525\ARM\ARMCC\Bin\..\include\stdbool.h
-.\objects\ssi.o: D:\Keil525\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\ssi.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\ssi.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\ssi.o: .\Lib\inc/hw_ints.h
 .\objects\ssi.o: .\Lib\inc/hw_memmap.h
 .\objects\ssi.o: .\Lib\inc/hw_ssi.h

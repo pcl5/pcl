@@ -1,5 +1,15 @@
+/*
+ * @Description: TM4C
+ * @file: ${filename}
+ * @brief: ${BRIEF}
+ * @Version: 1.0
+ * @Autor: PCL
+ * @Date: 2023-07-30 12:12:51
+ * @Code Reference: cbr wgj wx
+ * @LastEditTime: 2023-07-30 12:23:28
+ */
 /**
- * @file Queue.h
+ * @file user_queue.h
  * @author cbr (ran13245@outlook.com)
  * @brief ¼òÒ×¶ÓÁÐ
  * @version 1.0
