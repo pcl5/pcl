@@ -20,13 +20,13 @@ motor* wheel_left;
 motor* wheel_right;
 
 #if (!TEST_BENCH)
-static void Motor_Set_V_Real(motor* motor,float v_real);
-static void Motor_Set_V_Enc(motor* motor,float v_enc);
-static void Motor_Update_Output(motor* motor);
-static void Motor_Update_Input(motor* motor);
-static float Motor_Get_V_Real(motor* motor);
-static void Motor_Clear_Distance(motor* motor);
-static float Motor_Get_Distance(motor* motor);
+static void Motor_Set_V_Real(motor* motor,float v_real);    //设置电机目标真实速度,单位mm/s
+static void Motor_Set_V_Enc(motor* motor,float v_enc);      //设置电机目标编码器速度,单位 编码器单位/s
+static void Motor_Update_Output(motor* motor);              //更新电机输出,调用增量式pid
+static void Motor_Update_Input(motor* motor);               //更新电机当前速度
+static float Motor_Get_V_Real(motor* motor);                //获取电机当前真实速度,单位mm/s
+static void Motor_Clear_Distance(motor* motor);             //清除电机累计位置
+static float Motor_Get_Distance(motor* motor);              //获得电机累计位置,单位mm
 
 static void Motor_Set_V_Real_All(float v_real_LF,float v_real_LR,float v_real_RF,float v_real_RR);
 //static void Motor_Set_V_Enc_All(float v_enc_LF,float v_enc_LR,float v_enc_RF,float v_enc_RR);
