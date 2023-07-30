@@ -23,8 +23,8 @@ extern BaseType_t RTOS_Init(void);//创建任务,在freertos.c中实现
  */
 static void BSP_Init(void){
 	SysCtlClockFreqSet(SYSCTL_XTAL_16MHZ|SYSCTL_OSC_MAIN|SYSCTL_USE_PLL|SYSCTL_CFG_VCO_240,120000000);
-//	FPUEnable();
-//	FPULazyStackingEnable();
+	FPUEnable();
+	FPULazyStackingEnable();
 	IntPriorityGroupingSet(3);
 	init_Bsp_GPIO();
 	init_Bsp_UART();
@@ -35,7 +35,7 @@ int main(void){
 	BaseType_t xReturn = pdPASS;//
 
 	BSP_Init();
-  user_printf(CONSOLE_UART,"BSP Pass.\r\n");
+  printf_user(CONSOLE_UART,"BSP Pass.\r\n");
 	xReturn = RTOS_Init();
 	
 	if(pdPASS == xReturn){

@@ -689,6 +689,11 @@
               <FileType>1</FileType>
               <FilePath>.\User\BSP\bsp_motor.c</FilePath>
             </File>
+            <File>
+              <FileName>bsp_uDMA.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\User\BSP\bsp_uDMA.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -698,6 +703,11 @@
               <FileName>filter.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\User\utils\filter.c</FilePath>
+            </File>
+            <File>
+              <FileName>user_kalman.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\User\utils\user_kalman.c</FilePath>
             </File>
           </Files>
         </Group>
