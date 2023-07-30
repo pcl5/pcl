@@ -1,6 +1,6 @@
 /**
  * @file config.h
- * @brief ²ÎÊıÉèÖÃ
+ * @brief å‚æ•°è®¾ç½®
  * @version 0.1
  * @date 2023-06-28
  * 
@@ -8,16 +8,16 @@
  * 
  */
 
-/*ÏµÍ³ÆµÂÊ,½ö×÷Îª¼ÆËã²ÎÊı,²»ÄÜÓÃÀ´ÉèÖÃ*/
+/*ç³»ç»Ÿé¢‘ç‡,ä»…ä½œä¸ºè®¡ç®—å‚æ•°,ä¸èƒ½ç”¨æ¥è®¾ç½®*/
 #define         USER_SYS_FREQ          120000000
 
 
-/*----testbenchÊÇ·ñÆôÓÃ----*/
+/*----testbenchæ˜¯å¦å¯ç”¨----*/
 #define         TEST_BENCH          0
-/*----IMUÂË²¨ÊÇ·ñÆôÓÃ----*/
+/*----IMUæ»¤æ³¢æ˜¯å¦å¯ç”¨----*/
 #define         USE_IMU_FILTER      0 
 
-/*ÂË²¨Æ÷ÖĞĞÄÆµÂÊ²ÎÊı*/
+/*æ»¤æ³¢å™¨ä¸­å¿ƒé¢‘ç‡å‚æ•°*/
 #define         FILTER_FREQ_IMU_AX     50.0F
 #define         FILTER_FREQ_IMU_AY     50.0F
 #define         FILTER_FREQ_IMU_AZ     50.0F
@@ -26,17 +26,17 @@
 #define         FILTER_FREQ_IMU_GZ     25.0F
 
 /**
- * @brief ´®¿Ú
+ * @brief ä¸²å£
  * ****************************************************************************************************************************
  */
-/*Éè±¸´®¿Ú,²»ÓÃÊ±×¢ÊÍµô*/
+/*è®¾å¤‡ä¸²å£,ä¸ç”¨æ—¶æ³¨é‡Šæ‰*/
 #if (!TEST_BENCH)
     #define         USB_UART         UART4_BASE
     #define         BLE_UART         UART1_BASE
     #define         Jetson_UART      UART3_BASE
     #define         K210_UART        UART2_BASE
     #define         TFLuna_UART      UART0_BASE
-    /*²¨ĞÎÏÔÊ¾´®¿Ú*/
+    /*æ³¢å½¢æ˜¾ç¤ºä¸²å£*/
     #define         WAVE_UART        USB_UART
 #else 
     #define         USB_UART         UART4_BASE
@@ -45,31 +45,31 @@
     // #define         K210_UART        UART2_BASE
     // #define         OPENMV_UART      UART0_BASE
 
-    /*²¨ĞÎÏÔÊ¾´®¿Ú*/
+    /*æ³¢å½¢æ˜¾ç¤ºä¸²å£*/
     #define         WAVE_UART        USB_UART
 #endif
  
-/*ÖÕ¶Ë´®¿Ú*/
+/*ç»ˆç«¯ä¸²å£*/
 #define             CONSOLE_UART       USB_UART 
 
-/*´®¿Ú²¨ÌØÂÊ*/
+/*ä¸²å£æ³¢ç‰¹ç‡*/
 #define         BAUD_RATE_UART0     115200
 #define         BAUD_RATE_UART1     9600
 #define         BAUD_RATE_UART2     115200
 #define         BAUD_RATE_UART3     115200
 #define         BAUD_RATE_UART4     115200
 
-/*Ö¡Í·Ö¡Î²*/
+/*å¸§å¤´å¸§å°¾*/
 #define         UART_HEAD        '['
 #define         UART_TAIL        ']'
 
 /**
- * @brief ÖĞ¶ÏÓÅÏÈ¼¶,(0~7)<<5,ÁôÒâFreeRTOS¹ÜÀíÖĞ¶Ï×îµÍÓÅÏÈ¼¶=2
+ * @brief ä¸­æ–­ä¼˜å…ˆçº§,(0~7)<<5,ç•™æ„FreeRTOSç®¡ç†ä¸­æ–­æœ€ä½ä¼˜å…ˆçº§=2
  * ****************************************************************************************************************************
  */
 
 #if   TEST_BENCH
-/*´®¿Ú*/
+/*ä¸²å£*/
 #define         PRIORITY_UART0      (0<<5)
 #define         PRIORITY_UART1      (0<<5)
 #define         PRIORITY_UART2      (0<<5)
@@ -86,7 +86,7 @@
 #define         PRIORITY_TIM        (0<<5)
 
 #else
-/*´®¿Ú*/
+/*ä¸²å£*/
 #define         PRIORITY_UART0      (3<<5)
 #define         PRIORITY_UART1      (3<<5)
 #define         PRIORITY_UART2      (3<<5)
@@ -103,62 +103,94 @@
 #endif
 
 /**
- * @brief FreeRTOS¸÷ÈÎÎñÖ´ĞĞ¼ä¸ôÊ±¼ä,ms
+ * @brief FreeRTOSå„ä»»åŠ¡æ‰§è¡Œé—´éš”æ—¶é—´,ms
  * 
  */
 #define         TASK_ITV_CAR        50
 #define         TASK_ITV_IMU        5
 #define         TASK_ITV_UPLOAD     10
 /**
- * @brief Ğ¡³µ²ÎÊı
+ * @brief å°è½¦å‚æ•°
  * ****************************************************************************************************************************
  */
-//µç»ú¸öÊı,4¸ö»ò2¸ö,2¸öÊ±Ê¹ÓÃÇ°ÂÖ
+//ç”µæœºä¸ªæ•°,4ä¸ªæˆ–2ä¸ª,2ä¸ªæ—¶ä½¿ç”¨å‰è½®
 #define         USE_4_MOTOR             1
 
-//ÊÇ·ñÊ¹ÓÃËÄ±¶Æµ
+//æ˜¯å¦ä½¿ç”¨å››å€é¢‘
 #define         USE_4_TIMES_ENCODER     1
 
-//ÊÇ·ñ´ÓIMU¶ÁµÃµ±Ç°½ÇËÙ¶È
+//æ˜¯å¦ä»IMUè¯»å¾—å½“å‰è§’é€Ÿåº¦
 #define         V_DEGREE_FROM_IMU       0
 
-//ÊÇ·ñÊ¹ÓÃ½ÇËÙ¶ÈPID
+//æ˜¯å¦ä½¿ç”¨è§’é€Ÿåº¦PID
 #define         V_ANGLE_PID             1
 
-//Ã¿È¦±àÂëÆ÷Êı
+//æ¯åœˆç¼–ç å™¨æ•°
 #define         ENC_EVERY_CIRCLE        1560
-//ÂÖÖ±¾¶ mm
+//è½®ç›´å¾„ mm
 #define         WHEEL_DIR               67
-//ÂÖÖÜ³¤ mm
+//è½®å‘¨é•¿ mm
 #define         WHEEL_PERIMETER         210.4867096F
 
-//È¦ËÙ=Êµ¼ÊËÙ¶È/ÖÜ³¤=±àÂëÆ÷ËÙ¶È/Ã¿È¦±àÂëÆ÷Êı
-//±àÂëÆ÷ËÙ¶È/Êµ¼ÊËÙ¶È=Ã¿È¦±àÂëÆ÷Êı/ÖÜ³¤         !!³¤¶Èmm!!
+//åœˆé€Ÿ=å®é™…é€Ÿåº¦/å‘¨é•¿=ç¼–ç å™¨é€Ÿåº¦/æ¯åœˆç¼–ç å™¨æ•°
+//ç¼–ç å™¨é€Ÿåº¦/å®é™…é€Ÿåº¦=æ¯åœˆç¼–ç å™¨æ•°/å‘¨é•¿         !!é•¿åº¦mm!!
 #define         V_REAL_TO_ENC           7.36388588F
 
-/*µç»ú·½Ïò*/
+/*ç”µæœºæ–¹å‘*/
 #define         LF_DIR                  1
 #define         LR_DIR                  1
 #define         RF_DIR                  0
 #define         RR_DIR                  0
 
-//×óÓÒÂÖ¾àµÄÒ»°ë        !!µ¥Î»mm!!
+//å·¦å³è½®è·çš„ä¸€åŠ        !!å•ä½mm!!
 #define         FRAME_W_HALF            80.0F
 
-//Ç°ºóÂÖÖá¾àµÄÒ»°ë
+//å‰åè½®è½´è·çš„ä¸€åŠ
 #define         FRAME_L_HALF            100.0F
 
 /**
- * @brief PID²ÎÊı
+ * @brief æé™å‚æ•°
+ * ****************************************************************************************************************************
+ */
+//ç”µæœºç›®æ ‡ç¼–ç å™¨é€Ÿåº¦æœ€å¤§å€¼,ç¼–ç å™¨å•ä½/s
+#define         MAX_V_ENC               (3*ENC_EVERY_CIRCLE)
+
+//ç”µæœºè¾“å‡ºæœ€å¤§PWMå ç©ºæ¯”
+#define         MAX_MOTOR_DUTY          0.85F
+
+//å°ºåº¦å˜æ¢,å ç©ºæ¯”çš„100%å¯¹åº”PIDçš„1000,æé«˜è®¡ç®—ç²¾åº¦
+#define         ZOOM_PID_TO_DUTY        0.001F
+
+//å¢é‡å¼PIDå¢é‡é™å¹…
+#define         LIMIT_INC_LF            0.5F*MAX_MOTOR_DUTY/ZOOM_PID_TO_DUTY     /*å•ä½:å ç©ºæ¯”1/1000*/
+#define         LIMIT_INC_LR            0.5F*MAX_MOTOR_DUTY/ZOOM_PID_TO_DUTY     
+#define         LIMIT_INC_RF            0.5F*MAX_MOTOR_DUTY/ZOOM_PID_TO_DUTY
+#define         LIMIT_INC_RR            0.5F*MAX_MOTOR_DUTY/ZOOM_PID_TO_DUTY
+
+
+//ä½ç½®å¼PIDé™å¹…,PWMå ç©ºæ¯”100%å¯¹åº”PIDçš„1000
+#define         LIMIT_POS_LF            (MAX_MOTOR_DUTY*1000)
+#define         LIMIT_POS_LR            (MAX_MOTOR_DUTY*1000)
+#define         LIMIT_POS_RF            (MAX_MOTOR_DUTY*1000)
+#define         LIMIT_POS_RR            (MAX_MOTOR_DUTY*1000)
+
+//ä½ç½®å¼PIDç§¯åˆ†é™å¹…
+#define         LIMIT_ITGR_MAX          1000000000.0F
+#define         LIMIT_ITGR_LF           LIMIT_ITGR_MAX
+#define         LIMIT_ITGR_LR           LIMIT_ITGR_MAX
+#define         LIMIT_ITGR_RF           LIMIT_ITGR_MAX
+#define         LIMIT_ITGR_RR           LIMIT_ITGR_MAX
+/**
+ * @brief PIDå‚æ•°
  * ****************************************************************************************************************************
  */
 #define         P_LF            0.05F
 #define         P_LR            0.05F
 #define         P_RF            0.05F
 #define         P_RR            0.05F
-//#define         P_POS           1.0F    //Î»ÖÃ
-//#define         P_SPIN          2.0F    //Ô­µØĞı×ª
-//#define         P_V_ANGLE       0.5F    //½ÇËÙ¶È
+//#define         P_POS           1.0F    //ä½ç½®
+//#define         P_SPIN          2.0F    //åŸåœ°æ—‹è½¬
+//#define         P_V_ANGLE       0.5F    //è§’é€Ÿåº¦
 
 #define         I_LF            0.01F
 #define         I_LR            0.01F
