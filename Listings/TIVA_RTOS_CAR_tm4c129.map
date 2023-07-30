@@ -796,6 +796,19 @@ Section Cross References
     bsp_gpio.o(i.init_Bsp_GPIO) refers to gpio.o(i.GPIOIntTypeSet) for GPIOIntTypeSet
     bsp_gpio.o(i.init_Bsp_GPIO) refers to tm4c_it.o(i.EXTI_PORTG_IRQHandler) for EXTI_PORTG_IRQHandler
     bsp_gpio.o(i.init_Bsp_GPIO) refers to tm4c_it.o(i.EXTI_PORTE_IRQHandler) for EXTI_PORTE_IRQHandler
+    bsp_led.o(i.Set_LED) refers to gpio.o(i.GPIOPinWrite) for GPIOPinWrite
+    bsp_led.o(i.Set_LED_B) refers to gpio.o(i.GPIOPinWrite) for GPIOPinWrite
+    bsp_led.o(i.Set_LED_G) refers to gpio.o(i.GPIOPinWrite) for GPIOPinWrite
+    bsp_led.o(i.Set_LED_R) refers to gpio.o(i.GPIOPinWrite) for GPIOPinWrite
+    bsp_key.o(i.Key) refers to bsp_key.o(i.click_N_Double) for click_N_Double
+    bsp_key.o(i.Key) refers to bsp_key.o(i.Long_Press) for Long_Press
+    bsp_key.o(i.Key) refers to bsp_key.o(.data) for tran
+    bsp_key.o(i.Long_Press) refers to gpio.o(i.GPIOPinRead) for GPIOPinRead
+    bsp_key.o(i.Long_Press) refers to bsp_key.o(.data) for Long_Press
+    bsp_key.o(i.click) refers to gpio.o(i.GPIOPinRead) for GPIOPinRead
+    bsp_key.o(i.click) refers to bsp_key.o(.data) for flag_key
+    bsp_key.o(i.click_N_Double) refers to gpio.o(i.GPIOPinRead) for GPIOPinRead
+    bsp_key.o(i.click_N_Double) refers to bsp_key.o(.data) for Forever_count
     bsp_uart.o(i.RingBuf_uint8_t_pop_length) refers to memcpya.o(.text) for __aeabi_memcpy
     bsp_uart.o(i.UartRxIntHandler) refers to uart.o(i.UARTIntClear) for UARTIntClear
     bsp_uart.o(i.UartRxIntHandler) refers to uart.o(i.UARTRxErrorClear) for UARTRxErrorClear
@@ -832,6 +845,19 @@ Section Cross References
     bsp_uart.o(i.init_Bsp_UART) refers to tm4c_it.o(i.UART3_IRQHandler) for UART3_IRQHandler
     bsp_uart.o(i.init_Bsp_UART) refers to tm4c_it.o(i.UART4_IRQHandler) for UART4_IRQHandler
     bsp_uart.o(i.init_Bsp_UART) refers to bsp_uart.o(.bss) for uart_usb
+    bsp_pwm.o(i.Drv_PWM_Init) refers to sysctl.o(i.SysCtlPeripheralEnable) for SysCtlPeripheralEnable
+    bsp_pwm.o(i.Drv_PWM_Init) refers to gpio.o(i.GPIOPinConfigure) for GPIOPinConfigure
+    bsp_pwm.o(i.Drv_PWM_Init) refers to gpio.o(i.GPIOPinTypePWM) for GPIOPinTypePWM
+    bsp_pwm.o(i.Drv_PWM_Init) refers to pwm.o(i.PWMClockSet) for PWMClockSet
+    bsp_pwm.o(i.Drv_PWM_Init) refers to pwm.o(i.PWMGenConfigure) for PWMGenConfigure
+    bsp_pwm.o(i.Drv_PWM_Init) refers to pwm.o(i.PWMGenPeriodSet) for PWMGenPeriodSet
+    bsp_pwm.o(i.Drv_PWM_Init) refers to pwm.o(i.PWMPulseWidthSet) for PWMPulseWidthSet
+    bsp_pwm.o(i.Drv_PWM_Init) refers to pwm.o(i.PWMGenEnable) for PWMGenEnable
+    bsp_pwm.o(i.Drv_PWM_Init) refers to pwm.o(i.PWMOutputState) for PWMOutputState
+    bsp_pwm.o(i.Set_PWM) refers to pwm.o(i.PWMOutputState) for PWMOutputState
+    bsp_pwm.o(i.Set_PWM) refers to pwm.o(i.PWMGenPeriodGet) for PWMGenPeriodGet
+    bsp_pwm.o(i.Set_PWM) refers to pwm.o(i.PWMPulseWidthSet) for PWMPulseWidthSet
+    bsp_pwm.o(i.Set_PWM) refers to pwm.o(i.PWMGenEnable) for PWMGenEnable
     filter.o(i.biquadFilterInit) refers to sinf.o(i.__hardfp_sinf) for __hardfp_sinf
     filter.o(i.biquadFilterInit) refers to cosf.o(i.__hardfp_cosf) for __hardfp_cosf
     filter.o(i.biquadFilterInitLPF) refers to sqrtf.o(i.__hardfp_sqrtf) for __hardfp_sqrtf
@@ -1981,6 +2007,15 @@ Removing Unused input sections from the image.
     Removing i2cm_drv.o(i.I2CMWrite8), (92 bytes).
     Removing i2cm_drv.o(i.I2CMWrite8Callback), (66 bytes).
     Removing bsp_gpio.o(i.init_Bsp_GPIO), (600 bytes).
+    Removing bsp_led.o(i.Set_LED), (96 bytes).
+    Removing bsp_led.o(i.Set_LED_B), (36 bytes).
+    Removing bsp_led.o(i.Set_LED_G), (36 bytes).
+    Removing bsp_led.o(i.Set_LED_R), (36 bytes).
+    Removing bsp_key.o(i.Key), (48 bytes).
+    Removing bsp_key.o(i.Long_Press), (132 bytes).
+    Removing bsp_key.o(i.click), (72 bytes).
+    Removing bsp_key.o(i.click_N_Double), (248 bytes).
+    Removing bsp_key.o(.data), (22 bytes).
     Removing bsp_uart.o(i.Queue_uint8_t_count_remain), (34 bytes).
     Removing bsp_uart.o(i.Queue_uint8_t_dequeue), (66 bytes).
     Removing bsp_uart.o(i.Queue_uint8_t_init), (12 bytes).
@@ -1995,6 +2030,8 @@ Removing Unused input sections from the image.
     Removing bsp_uart.o(i.error_uart), (4 bytes).
     Removing bsp_uart.o(i.init_Bsp_UART), (628 bytes).
     Removing bsp_uart.o(.bss), (2240 bytes).
+    Removing bsp_pwm.o(i.Drv_PWM_Init), (340 bytes).
+    Removing bsp_pwm.o(i.Set_PWM), (244 bytes).
     Removing filter.o(i.biquadFilterApply), (70 bytes).
     Removing filter.o(i.biquadFilterInit), (292 bytes).
     Removing filter.o(i.biquadFilterInitLPF), (58 bytes).
@@ -2012,7 +2049,7 @@ Removing Unused input sections from the image.
     Removing i2cm_drv.o(i.I2CMReadBatched), (50 bytes).
     Removing i2cm_drv.o(i.I2CMReadModifyWrite16BE), (64 bytes).
 
-1092 unused section(s) (total 48474 bytes) removed from the image.
+1103 unused section(s) (total 49784 bytes) removed from the image.
 
 ==============================================================================
 
@@ -2394,21 +2431,21 @@ Memory Map of the image
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x00000000   0x00000000   0x00000288   Code   RO          325    RESET               startup_rvmdk.o
-    0x00000288   0x00000288   0x00000000   Code   RO         7628  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
-    0x00000288   0x00000288   0x00000004   Code   RO         7654    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
-    0x0000028c   0x0000028c   0x00000004   Code   RO         7657    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
-    0x00000290   0x00000290   0x00000000   Code   RO         7659    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
-    0x00000290   0x00000290   0x00000000   Code   RO         7661    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
-    0x00000290   0x00000290   0x00000008   Code   RO         7662    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
-    0x00000298   0x00000298   0x00000000   Code   RO         7664    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
-    0x00000298   0x00000298   0x00000000   Code   RO         7666    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
-    0x00000298   0x00000298   0x00000004   Code   RO         7655    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x00000288   0x00000288   0x00000000   Code   RO         7713  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x00000288   0x00000288   0x00000004   Code   RO         7739    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x0000028c   0x0000028c   0x00000004   Code   RO         7742    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x00000290   0x00000290   0x00000000   Code   RO         7744    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x00000290   0x00000290   0x00000000   Code   RO         7746    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x00000290   0x00000290   0x00000008   Code   RO         7747    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x00000298   0x00000298   0x00000000   Code   RO         7749    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x00000298   0x00000298   0x00000000   Code   RO         7751    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x00000298   0x00000298   0x00000004   Code   RO         7740    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
     0x0000029c   0x0000029c   0x00000026   Code   RO          978    .emb_text           cpu.o
     0x000002c2   0x000002c2   0x00000002   PAD
     0x000002c4   0x000002c4   0x000000b6   Code   RO         7158    .emb_text           port.o
-    0x0000037a   0x0000037a   0x00000024   Code   RO         7631    .text               mc_w.l(memcpya.o)
+    0x0000037a   0x0000037a   0x00000024   Code   RO         7716    .text               mc_w.l(memcpya.o)
     0x0000039e   0x0000039e   0x00000002   PAD
-    0x000003a0   0x000003a0   0x00000024   Code   RO         7676    .text               mc_w.l(init.o)
+    0x000003a0   0x000003a0   0x00000024   Code   RO         7761    .text               mc_w.l(init.o)
     0x000003c4   0x000003c4   0x0000001c   Code   RO           71    i.AppTaskCreate     freertos.o
     0x000003e0   0x000003e0   0x00000014   Code   RO            1    i.BSP_Init          main.o
     0x000003f4   0x000003f4   0x00000010   Code   RO         3211    i.IntMasterEnable   interrupt.o
@@ -2417,9 +2454,9 @@ Memory Map of the image
     0x000006f8   0x000006f8   0x00000034   Code   RO         7159    i.SysTick_Handler   port.o
     0x0000072c   0x0000072c   0x00000064   Code   RO         4439    i._SysCtlFrequencyGet  sysctl.o
     0x00000790   0x00000790   0x00000028   Code   RO         4440    i._SysCtlMemTimingGet  sysctl.o
-    0x000007b8   0x000007b8   0x0000000e   Code   RO         7680    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x000007c6   0x000007c6   0x00000002   Code   RO         7681    i.__scatterload_null  mc_w.l(handlers.o)
-    0x000007c8   0x000007c8   0x0000000e   Code   RO         7682    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x000007b8   0x000007b8   0x0000000e   Code   RO         7765    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x000007c6   0x000007c6   0x00000002   Code   RO         7766    i.__scatterload_null  mc_w.l(handlers.o)
+    0x000007c8   0x000007c8   0x0000000e   Code   RO         7767    i.__scatterload_zeroinit  mc_w.l(handlers.o)
     0x000007d6   0x000007d6   0x00000024   Code   RO            2    i.main              main.o
     0x000007fa   0x000007fa   0x00000002   PAD
     0x000007fc   0x000007fc   0x0000007c   Code   RO         6696    i.prvAddCurrentTaskToDelayedList  tasks.o
@@ -2490,7 +2527,7 @@ Memory Map of the image
     0x00002348   0x00002348   0x00000058   Code   RO         6992    i.xTimerCreateTimerTask  timers.o
     0x000023a0   0x000023a0   0x00000084   Code   RO         6993    i.xTimerGenericCommand  timers.o
     0x00002424   0x00002424   0x00000254   Data   RO         4441    .constdata          sysctl.o
-    0x00002678   0x00002678   0x00000020   Data   RO         7678    Region$$Table       anon$$obj.o
+    0x00002678   0x00002678   0x00000020   Data   RO         7763    Region$$Table       anon$$obj.o
 
 
     Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x00002698, Size: 0x00007cd8, Max: 0x00040000, ABSOLUTE)
@@ -2517,23 +2554,23 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-        38          0          0          0          0        600   cpu.o
-         0          0          0          0          0      11404   event_groups.o
-        76         30          0          4          0       8784   freertos.o
-       692         62          0         24      30720       4479   heap_4.o
-        16          0          0          0          0        566   interrupt.o
-       148          0          0          0          0       3370   list.o
-        56          8          0          0          0       9863   main.o
-       938         86          0         12          0      11261   port.o
-      2034         20          0          0         80      14585   queue.o
-       648        622          0          0        256        312   startup_rvmdk.o
-       848         52        596          0          0       4585   sysctl.o
-      2482        358          0         60        740      20265   tasks.o
-      1142        118          0         20         40      17019   timers.o
-         0          0          0          0          0       2452   tm4c_it.o
+        38          0          0          0          0        604   cpu.o
+         0          0          0          0          0      11420   event_groups.o
+        76         30          0          4          0       8808   freertos.o
+       692         62          0         24      30720       4503   heap_4.o
+        16          0          0          0          0        570   interrupt.o
+       148          0          0          0          0       3394   list.o
+        56          8          0          0          0       9879   main.o
+       938         86          0         12          0      11309   port.o
+      2034         20          0          0         80      14649   queue.o
+       648        622          0          0        256        316   startup_rvmdk.o
+       848         52        596          0          0       4605   sysctl.o
+      2482        358          0         60        740      20365   tasks.o
+      1142        118          0         20         40      17083   timers.o
+         0          0          0          0          0       2456   tm4c_it.o
 
     ----------------------------------------------------------------------
-      9128       1356        628        120      31840     109545   Object Totals
+      9128       1356        628        120      31840     109961   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         10          0          0          0          4          0   (incl. Padding)
 
@@ -2573,8 +2610,8 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      9252       1372        628        120      31840     102885   Grand Totals
-      9252       1372        628        120      31840     102885   ELF Image Totals
+      9252       1372        628        120      31840     103301   Grand Totals
+      9252       1372        628        120      31840     103301   ELF Image Totals
       9252       1372        628        120          0          0   ROM Totals
 
 ==============================================================================
