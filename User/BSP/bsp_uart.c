@@ -92,6 +92,11 @@ void user_printf(uint32_t ui32Base, const char *pui8Format, ...)
     }
 }
 
+void USB_Printf(const char *pui8Format, ...)
+{
+    user_printf(USB_UART,pui8Format);
+}
+
 /*!
  * @brief ≥ı ºªØUART
  */

@@ -101,7 +101,7 @@ void Motor_Judge_Accuracy(void);
 
 #endif
 
-void init_motor(void);
+void init_bsp_motor(void);
 void Motor_Update_Input_All(void);
 void Motor_Update_Output_All(void);
 

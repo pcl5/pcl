@@ -6,13 +6,13 @@
  * @Autor: PCL
  * @Date: 2023-07-30 12:32:40
  * @Code Reference: cbr wgj wx
- * @LastEditTime: 2023-07-30 22:39:05
+ * @LastEditTime: 2023-07-31 11:25:43
  */
 /**
  * @file bsp.h
  * @author cbr (ran13245@outlook.com)
  * @brief ���ɰ弶��������
- * @attention ֻ������Ӧ�ò����,�����������������,������ܳ���ͷ�ļ��ݹ�����
+ * @attention ֻ������Ӧ�ò����?,�����������������?,������ܳ���ͷ�ļ��ݹ�����?
  * @version 0.1
  * @date 2023-07-9
  * 
@@ -47,7 +47,7 @@
 #include "bsp_gpio.h"
 #include "bsp_pwm.h"
 #include "bsp_keypad.h"
-//#include "bsp_i2c.h"
+#include "bsp_i2c.h"
 #include "bsp_uDMA.h"
 //#include "bsp_adc.h"
 //#include "bsp_tim.h"
@@ -69,6 +69,7 @@
 //#include "car_control.h"
 #include "filter.h"
 //#include "software_pwm.h"
+#include "user_kalman.h"
 
 #include "config.h"
 //#include "const.h"

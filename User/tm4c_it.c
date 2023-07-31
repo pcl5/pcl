@@ -16,12 +16,25 @@
 #include "FreeRTOS.h"
 #include "task.h"
 #include "queue.h"
+#include "i2cm_drv.h"
 /**
  * 关于硬件中断优先级的设置:
  * 前三位是抢占优先级，数字越小优先级越高
  * 后五位不建议使用
  */
 
+/*************************************/
+/*              I2C                  */
+/*************************************/
+void I2C8_IntHandler(void)
+{
+	// I2CMIntHandler(&ICM20602_dev.I2CInstance);
+	I2CMIntHandler(&I2C8Inst);
+}
+
+/*************************************/
+/*              Encoder              */
+/*************************************/
 
 //四倍频:
 #if	USE_4_TIMES_ENCODER
@@ -241,6 +254,10 @@ void EXTI_RREB_IRQHandler(void)
 }
 #endif
 
+/*************************************/
+/*              Uart                 */
+/*************************************/
+
 /*
  * @brief:UART0 receive interrupt handler.
  * */
@@ -290,6 +307,11 @@ void UART4_IRQHandler(void)
 	UartRxIntHandler(UART4_BASE);
 
 }
+
+/*************************************/
+/*              GPIO                 */
+/*************************************/
+
 void EXTI_PORTE_IRQHandler(void){
 //	uint32_t IntPins=GPIOIntStatus(GPIO_PORTE_BASE,true);
 //	static uint8_t key=0;
@@ -312,6 +334,10 @@ void EXTI_PORTE_IRQHandler(void){
 //	// portYIELD_FROM_ISR(xHigherPriorityTaskWoken);
 }
 
+
+/*************************************/
+/*              Encoder-GPIO         */
+/*************************************/
 #if USE_4_TIMES_ENCODER
 void EXTI_PORTG_IRQHandler(void){
 //	uint32_t IntPins=GPIOIntStatus(GPIO_PORTG_BASE,true);
@@ -340,6 +366,10 @@ void EXTI_PORTQ_IRQHandler(void){
 	if(IntPins&EncB_LeftFront_IntPin) EXTI_LFEB_IRQHandler();
 }
 #endif
+
+/*************************************/
+/*              Timers               */
+/*************************************/
 
 void TIM1_IRQHandler(void){
 //	Tim_CallBack();
