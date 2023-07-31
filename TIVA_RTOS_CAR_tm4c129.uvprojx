@@ -729,6 +729,11 @@
               <FileType>1</FileType>
               <FilePath>.\User\utils\user_kalman.c</FilePath>
             </File>
+            <File>
+              <FileName>pid.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\User\utils\pid.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>
