@@ -184,7 +184,6 @@
             <hadXRAM>0</hadXRAM>
             <uocXRam>0</uocXRam>
             <RvdsVP>2</RvdsVP>
-            <RvdsMve>0</RvdsMve>
             <hadIRAM2>0</hadIRAM2>
             <hadIROM2>0</hadIROM2>
             <StupSel>8</StupSel>
@@ -411,6 +410,11 @@
               <FileName>communication.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\User\communication.c</FilePath>
+            </File>
+            <File>
+              <FileName>car_attitude.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\User\car_attitude.c</FilePath>
             </File>
           </Files>
         </Group>
