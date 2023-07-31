@@ -57,6 +57,7 @@ extern uart_device uart_k210;
 extern uart_device uart_openmv;
 #endif
 void user_printf(uint32_t ui32Base, const char *pui8Format, ...);
+void USB_Printf(const char *pui8Format, ...);
 void init_Bsp_UART(void);
 void UartRxIntHandler(uint32_t ui32Base);
 void UartRxSolve(void);

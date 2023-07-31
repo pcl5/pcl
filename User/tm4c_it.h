@@ -3,6 +3,7 @@
 #ifdef __cplusplus
 extern "C"{
 #endif
+void I2C8_IntHandler(void);
 void EXTI_LFEA_IRQHandler(void);
 void EXTI_LFEB_IRQHandler(void);
 void EXTI_LREA_IRQHandler(void);

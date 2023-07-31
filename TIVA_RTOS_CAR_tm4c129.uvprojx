@@ -715,6 +715,16 @@
               <FileType>1</FileType>
               <FilePath>.\User\BSP\Datascope.c</FilePath>
             </File>
+            <File>
+              <FileName>bsp_i2c.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\User\BSP\bsp_i2c.c</FilePath>
+            </File>
+            <File>
+              <FileName>icm_20602.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\User\BSP\icm_20602.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

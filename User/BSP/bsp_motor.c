@@ -58,7 +58,7 @@ static float duty_limit(float duty)
  * @brief 初始化电机
  * @param  void
  */
-void init_motor(void){
+void init_bsp_motor(void){
     motor_LeftFront.dir=LF_DIR;
     motor_LeftRear.dir=LR_DIR;
     motor_RightFront.dir=RF_DIR;
